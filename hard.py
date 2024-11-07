@@ -9,12 +9,8 @@ from random import *
 max_attempts = 7
 
 
-words = ["about","across","act","address","afraid", "after", "afternoon", "baby", "back", "balloon", "basket", "bear", "beautiful", "become", "below","calendar", "camera", "candle",
-        "capital", "ceiling", "cat", "cheese", "church", "draw", "drive", "duck", "diary", "dictionary", "dinner", "eraser", "evening", "example", "exellent", "exercise", "family",
-        "famous", "father", "floor", "flower", "follow","ground", "guitar", "grandmother", "hamburger", "happen", "hungry", "interest", "introduce", "jungle", "just", "kind", 
-        "knee", "lake", "laugh", "matter", "mountain", "pass", "people", "question", "quick", "remember", "ribbon", "roof", "school", "summer", "strawberry", "supper", "sweet", 
-        "temple"]
 
+words = ["invulnerable", "substantive", "equivocal", "hereditary", "negligible","inadvertent","homogenize","predisposed","disseminate","ephemera","equanimity","tranquilizer","destitution","acquiesce","proliferate","conservation","pneumonoultramicroscopicsilicovolcanoconiosis","floccinaucinihilipilification"]
 
 if 'word' not in st.session_state:
     st.session_state.word = choice(words)
@@ -100,9 +96,9 @@ if st.session_state.attempts >= max_attempts:
 elif "_" not in st.session_state.display_word:
 
     st.header("정답을 맞췄습니다.")
+
     st.button("다시 시작", on_click=lambda: st.session_state.clear())
-    st.header('')
-    st.header('')
+
 
 
 st.header("단어: "+ " ".join(st.session_state.display_word))

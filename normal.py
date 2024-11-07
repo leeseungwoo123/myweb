@@ -6,7 +6,7 @@ from random import *
 영어=['q','w','e','r','t','y','u','i','o','p','a','s','d','f',
     'g','h','j','k','l','z','x','c','v','b','n','m']
 
-max_attempts = 7
+max_attempts = 5
 
 
 words = ["about","across","act","address","afraid", "after", "afternoon", "baby", "back", "balloon", "basket", "bear", "beautiful", "become", "below","calendar", "camera", "candle",
@@ -79,14 +79,10 @@ elif st.session_state.attempts==1:
 elif st.session_state.attempts==2:
                 img=st.image('6.png')
 elif st.session_state.attempts==3:
-                img=st.image('5.png')
-elif st.session_state.attempts==4:
                 img=st.image('4.png')
-elif st.session_state.attempts==5:
+elif st.session_state.attempts==4:
                 img=st.image('3.png')
-elif st.session_state.attempts==6:
-                img=st.image('2.png')
-elif st.session_state.attempts==7:
+elif st.session_state.attempts==5:
                 img=st.image('1.png')
 
 if st.session_state.attempts >= max_attempts:
@@ -107,7 +103,7 @@ elif "_" not in st.session_state.display_word:
 
 st.header("단어: "+ " ".join(st.session_state.display_word))
 
-st.write(f"남은 기회: {7-st.session_state.attempts}")
+st.write(f"남은 기회: {5-st.session_state.attempts}")
 
 st.write("추측한 글자: ", " ".join(st.session_state.guessed_letters))
 
